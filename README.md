@@ -185,19 +185,19 @@ payable(msg.sender).safeTransferETH(amount);
 
 ## Libraries
 
-* [solmate/utils/SafeTransferLib.sol](https://github.com/Rari-Capital/solmate/blob/main/src/utils/SafeTransferLib.sol)
+* [solmate/utils/SafeTransferLib.sol](./contracts/lib/solmate/src/utils/SafeTransferLib.sol)
 
-* [solmate/utils/ReentrancyGuard.sol](https://github.com/Rari-Capital/solmate/blob/main/src/utils/ReentrancyGuard.sol)
+* [solmate/utils/ReentrancyGuard.sol](./contracts/lib/solmate/src/utils/ReentrancyGuard.sol)
 
-* [openzeppelin/access/Ownable.sol](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol)
+* [openzeppelin/access/Ownable.sol](./contracts/lib/openzeppelin-contracts/contracts/access/Ownable.sol)
 
-* [solmate/tokens/ERC721.sol](https://github.com/Rari-Capital/solmate/blob/main/src/tokens/ERC721.sol)
+* [solmate/tokens/ERC721.sol](./contracts/lib/solmate/src/tokens/ERC721.sol)
 
-* [openzeppelin/utils/Strings.sol](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Strings.sol)
+* [openzeppelin/utils/Strings.sol](./contracts/lib/openzeppelin-contracts/contracts/utils/Strings.sol)
 
-* [hot-chain-svg/SVG.sol](https://github.com/w1nt3r-eth/hot-chain-svg/blob/main/contracts/SVG.sol)
+* [hot-chain-svg/SVG.sol](./contracts/lib/hot-chain-svg/contracts/SVG.sol)
 
-* [base64/base64.sol](https://github.com/Brechtpd/base64/blob/main/base64.sol)
+* [base64/base64.sol](./contracts/lib/base64/base64.sol)
 
 ---
 
