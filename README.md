@@ -8,7 +8,7 @@ Cally lets you create covered call vaults on any ERC20 or ERC721 that perpetuall
 
 ## Links
 
-Rinkeby testnet: https://rinkeby.cally.finance
+Rinkeby site: https://rinkeby.cally.finance
 
 Rinkeby etherscan: https://rinkeby.etherscan.io/address/0xfccf2ee317f46d032a3a70dccffc311db499921f#code
 
