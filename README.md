@@ -8,7 +8,7 @@
 - Ends TBD May 14, 2022 23:59 UTC
 
 
-# Cally x Code4Arena competition
+# Cally x Code4rena competition
 
 **Hello anon, thank you for taking the time to participate in this competition. Please try to break everything! <3**
 
