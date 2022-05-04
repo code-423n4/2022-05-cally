@@ -52,16 +52,16 @@ Regular example:
   either a)
 
     - Bob exercises his option after 23 days
-    - He sends and credits 164.3 ETH (strike amount) to Alice and the BAYC is sent to him
+    - He sends 164.3 ETH (strike amount) to the contract and the BAYC is sent to him. The 164.3 ETH is credited to Alice
     - His option is burned and Alice's vault is marked as `isExercised` and is stopped from starting any more auctions
 
   or b)
 
-    - After 30 days Bob's option expires out of the money
+    - After 30 days Bob's option expires out of the money and he has chosen not to exercise
     - The option is automatically put up for auction again with the same parameters (0.1 ETH premium, 30 day duration, BAYC, max strike 500 ETH)
 
 At any point Alice can `harvest` her uncollected premiums.
-If the option has been exercised then she can `harvest` her 164.3 strike ETH too.
+If the option has been exercised then she can `harvest` the 164.3 strike ETH too.
 If Alice wants to `withdraw` her underlying assets (ERC721/ERC20) and close her vault, then she has to initiate a withdrawal first and then wait for the currently active option to expire.
 
 Flow diagram:
@@ -181,6 +181,8 @@ vault.tokenType == TokenType.ERC721
 payable(msg.sender).safeTransferETH(amount);
 ```
 
+---
+
 ## Libraries
 
 * [solmate/utils/SafeTransferLib.sol](https://github.com/Rari-Capital/solmate/blob/main/src/utils/SafeTransferLib.sol)
@@ -197,18 +199,21 @@ payable(msg.sender).safeTransferETH(amount);
 
 * [base64/base64.sol](https://github.com/Brechtpd/base64/blob/main/base64.sol)
 
+---
 
 ## Novel curve logic/mathematical models
 
 ### Exponentially decreasing dutch auction with a reserve price
 
 Every time an option expires, a dutch auction is started for the strike price of the *new* option being sold following an exponential curve.
-The input parameters are startingStrike, auctionDuration, auctionEndTimestamp, reserveStrike, currentStrike. To get the current strike price in the auction:
+The input parameters are `startingStrike`, `auctionDuration`, `auctionEndTimestamp`, `reserveStrike`. To get the current strike price in the auction:
 
-    delta = max(auctionEndTimestamp - currentTimestamp, 0)
-    progress = delta / auctionDuration
-    auctionStrike = progress^2 * startingStrike
-    strike = max(auctionStrike, reserveStrike)
+```
+delta = max(auctionEndTimestamp - currentTimestamp, 0)
+progress = delta / auctionDuration
+auctionStrike = progress^2 * startingStrike
+strike = max(auctionStrike, reserveStrike)
+```
 
 for example using the following parameters: 
 
@@ -222,6 +227,24 @@ reserveStrike = 1.5 ETH
 yields an auction curve for the strike price that [looks like this](https://www.desmos.com/calculator/ewguztuwco):
 
 ![auction graph](./auction-graph.png)
+
+---
+
+## Tests
+
+There is a full test-suite included in the `/contracts/test` directory. 
+We are using the [foundry framework](https://github.com/foundry-rs/foundry).
+
+To run the tests:
+
+1. Install `foundry`, refer to [foundry](https://github.com/foundry-rs/foundry)
+2. Install `nodejs`, refer to [nodejs](https://nodejs.org/en/)
+
+```
+cd contracts
+npm install
+forge test --gas-report
+```
 
 ---
 
@@ -273,15 +296,21 @@ The `balanceOf` for each user is set to be defaulted to `type(uint256).max` inst
 
 This was done to save gas since not tracking the `balanceOf` avoids a single storage modification or initialisation on each transfer/mint/burn.
 
-## Author's additional notes
+---
+
+## Areas of concern for wardens
+
+We would like the main focus of this audit to be on trying to find core business logic flaws. 
+Anything that would allow a user to siphon funds or somehow get unexpected behaviour.
+For gas optimisations, the most high impact functions are vault creation (`createVault`) and purchasing of the option (`buyOption`).
+These functions will be called more than any others.
 
 There are a few places in the code where we have a lower confidence that things are correct. These may potentially serve as low-hanging fruit:
 
-* timestamp manipulation
+* Timestamp manipulation
 
-* dutch auction math error
+* Dutch auction math error
 
 * ERC721 modifications
 
-* external contract calls via token transfers leading to re-entrancy
-
+* External contract calls via token transfers leading to re-entrancy
