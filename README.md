@@ -8,7 +8,7 @@ Cally lets you create covered call vaults on any ERC20 or ERC721 that perpetuall
 
 ## Links
 
-Rinkeby site: https://rinkeby.cally.finance
+Rinkeby demo site: https://rinkeby.cally.finance
 
 Rinkeby etherscan: https://rinkeby.etherscan.io/address/0xfccf2ee317f46d032a3a70dccffc311db499921f#code
 
@@ -143,14 +143,14 @@ Alice can also initiate a withdrawal on her vault and get her NFT back. This is 
 
 **withdrawProtocolFees (onlyAdmin):**
 
-```
+```solidity
 payable(msg.sender).safeTransferETH(amount);
 ```
 
 
 **createVault:**
 
-```
+```solidity
 vault.tokenType == TokenType.ERC721
     ? ERC721(vault.token).transferFrom(msg.sender, address(this), vault.tokenIdOrAmount)
     : ERC20(vault.token).safeTransferFrom(msg.sender, address(this), vault.tokenIdOrAmount);
@@ -158,7 +158,7 @@ vault.tokenType == TokenType.ERC721
 
 **exercise:**
 
-```
+```solidity
 vault.tokenType == TokenType.ERC721
     ? ERC721(vault.token).transferFrom(msg.sender, address(this), vault.tokenIdOrAmount)
     : ERC20(vault.token).safeTransferFrom(msg.sender, address(this), vault.tokenIdOrAmount);
@@ -166,7 +166,7 @@ vault.tokenType == TokenType.ERC721
 
 **withdraw:**
 
-```
+```solidity
 harvest (internal call):
   payable(msg.sender).safeTransferETH(amount);
 
@@ -177,7 +177,7 @@ vault.tokenType == TokenType.ERC721
 
 **harvest:**
 
-```
+```solidity
 payable(msg.sender).safeTransferETH(amount);
 ```
 
@@ -289,10 +289,12 @@ All balanceOf modifications have been removed from the Cally NFTs.
 Given our use-case, it is a reasonable tradeoff.
 The `balanceOf` for each user is set to be defaulted to `type(uint256).max` instead of `0`.
 
-    function balanceOf(address owner) public pure override returns (uint256) {
-        require(owner != address(0), "ZERO_ADDRESS");
-        return type(uint256).max; // return max for all accounts
-    }
+```solidity
+function balanceOf(address owner) public pure override returns (uint256) {
+    require(owner != address(0), "ZERO_ADDRESS");
+    return type(uint256).max; // return max for all accounts
+}
+```
 
 This was done to save gas since not tracking the `balanceOf` avoids a single storage modification or initialisation on each transfer/mint/burn.
 
