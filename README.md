@@ -258,9 +258,9 @@ These are done to reduce gas costs but at the expense of code readability. Here 
 To save gas, the details of each vault are represented as a struct with packed variables. To reduce storage costs, `premium` and `dutchAuctionStartingStrike` are uint8 indexes.
 They index to:
 
-```
-premiumOptions = [0.01 ether, 0.025 ether, ... 100 ether]
-strikeOptions = [1 ether, 2 ether, ... 6765 ether]
+```solidity
+uint256[] public premiumOptions = [0.01 ether, 0.025 ether, ... 100 ether]
+uint256[] public strikeOptions = [1 ether, 2 ether, ... 6765 ether]
 ```
 
 This means that instead of storing a `uint256` for the strike and premium values, we can just store a single `uint8` index that references one of those options in the array. The cost here is flexibility since a user is limited to our predefined set of strike/premium options.
