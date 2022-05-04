@@ -9,6 +9,7 @@
 Clone the repo and then run:
 
 ```
+npm install
 forge install
 ```
 
@@ -16,4 +17,10 @@ forge install
 
 ```
 forge test
+```
+
+## Gas report
+
+```
+forge test --gas-report
 ```
