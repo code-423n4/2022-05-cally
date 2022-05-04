@@ -263,7 +263,7 @@ uint256[] public premiumOptions = [0.01 ether, 0.025 ether, ... 100 ether]
 uint256[] public strikeOptions = [1 ether, 2 ether, ... 6765 ether]
 ```
 
-This means that instead of storing a `uint256` for the strike and premium values, we can just store a single `uint8` index that references one of those options in the array. The cost here is flexibility since a user is limited to our predefined set of strike/premium options.
+This means that instead of storing a `uint256` for the strike and premium values, we can just store a single `uint8` index that references one of those options in the array. The cost here is flexibility since a user is limited to our predefined set of starting strike/premium options.
 
 ### Automatic auction starting
 
