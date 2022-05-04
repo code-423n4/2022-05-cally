@@ -146,7 +146,8 @@ contract Cally is CallyNft, ReentrancyGuard, Ownable {
     */
 
     /// @notice Creates a new vault that perpetually sells calls
-    ///         on the underlying assets.
+    ///         on the underlying assets until a call option is exercised
+    ///         or the owner initiates a withdrawal.
     /// @param tokenIdOrAmount The tokenId (NFT) or amount (ERC20) to vault
     /// @param token The address of the NFT or ERC20 contract to vault
     /// @param premiumIndex The index into the premiumOptions of each call that is sold
