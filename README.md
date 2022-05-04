@@ -195,19 +195,19 @@ payable(msg.sender).safeTransferETH(amount);
 
 ## Libraries
 
-* [solmate/utils/SafeTransferLib.sol](./contracts/lib/solmate/src/utils/SafeTransferLib.sol)
+* [solmate/utils/SafeTransferLib.sol](https://github.com/code-423n4/2022-05-cally/blob/main/contracts/lib/solmate/src/utils/SafeTransferLib.sol)
 
-* [solmate/utils/ReentrancyGuard.sol](./contracts/lib/solmate/src/utils/ReentrancyGuard.sol)
+* [solmate/utils/ReentrancyGuard.sol](https://github.com/code-423n4/2022-05-cally/blob/main/contracts/lib/solmate/src/utils/ReentrancyGuard.sol)
 
-* [openzeppelin/access/Ownable.sol](./contracts/lib/openzeppelin-contracts/contracts/access/Ownable.sol)
+* [openzeppelin/access/Ownable.sol](https://github.com/code-423n4/2022-05-cally/blob/main/contracts/lib/openzeppelin-contracts/contracts/access/Ownable.sol)
 
-* [solmate/tokens/ERC721.sol](./contracts/lib/solmate/src/tokens/ERC721.sol)
+* [solmate/tokens/ERC721.sol](https://github.com/code-423n4/2022-05-cally/blob/main/contracts/lib/solmate/src/tokens/ERC721.sol)
 
-* [openzeppelin/utils/Strings.sol](./contracts/lib/openzeppelin-contracts/contracts/utils/Strings.sol)
+* [openzeppelin/utils/Strings.sol](https://github.com/code-423n4/2022-05-cally/blob/main/contracts/lib/openzeppelin-contracts/contracts/utils/Strings.sol)
 
-* [hot-chain-svg/SVG.sol](./contracts/lib/hot-chain-svg/contracts/SVG.sol)
+* [hot-chain-svg/SVG.sol](https://github.com/code-423n4/2022-05-cally/blob/main/contracts/lib/hot-chain-svg/contracts/SVG.sol)
 
-* [base64/base64.sol](./contracts/lib/base64/base64.sol)
+* [base64/base64.sol](https://github.com/code-423n4/2022-05-cally/blob/main/contracts/lib/base64/base64.sol)
 
 ---
 
