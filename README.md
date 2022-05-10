@@ -4,8 +4,8 @@
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2022-05-cally-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
-- Starts TBD May 10, 2022 00:00 UTC
-- Ends TBD May 14, 2022 23:59 UTC
+- Starts May 10, 2022 00:00 UTC
+- Ends May 14, 2022 23:59 UTC
 
 
 # Cally x Code4rena competition
@@ -236,7 +236,7 @@ reserveStrike = 1.5 ETH
 
 yields an auction curve for the strike price that [looks like this](https://www.desmos.com/calculator/ewguztuwco):
 
-![auction graph](./auction-graph.png)
+![auction graph](https://github.com/code-423n4/2022-05-cally/blob/main/auction-graph.png)
 
 ---
 
