@@ -1,0 +1,204 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q2-2022 / ☑cally-may10
+==============================================================
+
+[05/05/2022 4:49 PM] kartoonjoy
+👋 Hello and welcome to the contest channel for the $50K **Cally** contest!
+
+📆 Contest opens May 10, 2022 at 0:00 UTC and runs through May 14, 2022 at 23:59 UTC (5 days).
+
+Please give a warm welcome to the Cally team, particularly @out.eth, who will be available for questions either here in the channel or via DM.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+Contest Page: https://code4rena.com/contests/2022-05-cally-contest
+
+{Embed}
+https://code4rena.com/contests/2022-05-cally-contest
+Code4rena Cally contest
+$50,000 USDC
+10 May 2022—14 May 2022
+Code4rena - ARCHIVE-Q2-2022 - ☑cally-may10 [971813440979083294].txt_Files/C4-banner-7C19B.png
+
+{Reactions}
+👋 (6) 
+
+[05/05/2022 6:10 PM] out.eth
+Hey guys, feel free to DM me if you have any questions 🙂
+
+{Reactions}
+👍 (5) 
+
+[05/10/2022 12:04 AM] out.eth
+Aaaaand the contest begins :pepe_sabers: 
+
+Again, feel free to DM me with any questions 🙂 I am online from 08:00 BST - 23:30 BST
+If you prefer telegram my handle is @outdoteth
+
+You can also join our discord and ask questions in the #code4rena channel: https://discord.com/invite/rxppJYj4Jp
+
+{Reactions}
+🥳 (6) 
+
+[05/10/2022 3:58 AM] kenzoagada
+I find the README ascii diagram quite beautiful 🥲
+
+{Reactions}
+chefskiss (10) 
+
+[05/10/2022 7:12 AM] out.eth
+thank you! :cute:
+
+
+[05/10/2022 7:53 AM] Deleted User
+@out.eth 
+
+are these contracts in scope?
+```import "solmate/tokens/ERC721.sol";
+import "openzeppelin/utils/Strings.sol";
+import "hot-chain-svg/SVG.sol";
+import "base64/base64.sol";
+import "solmate/utils/SafeTransferLib.sol";
+import "solmate/utils/ReentrancyGuard.sol";
+import "openzeppelin/access/Ownable.sol";```
+
+
+[05/10/2022 8:08 AM] out.eth
+only these 2:
+
+```
+import "hot-chain-svg/SVG.sol";
+import "base64/base64.sol";
+```
+
+{Reactions}
+thankyou (4) 
+
+[05/14/2022 10:25 AM] catchup#2659
+Congrats on the is simple and straightforward documentation + clean and well commented coding  👏🏻 👏🏻
+
+{Reactions}
+💯 (5) 
+
+[05/14/2022 3:03 PM] out.eth
+thanks :pray:
+
+
+[05/14/2022 3:13 PM] jack.the.pug
+I’ll second that! beautiful work
+
+{Reactions}
+pepe_sabers (4) ➕ 
+
+[05/14/2022 4:45 PM] antonttc
+Totally agree!
+Also thanks for using foundry, it's so good that it only takes 3s to run any stimulation every time, it's also  the cleanest foundry tests i've ever seen. I'm gonna copy this structure in my own project too
+
+
+[05/14/2022 4:49 PM] acegawd
+DM.
+
+{Reactions}
+👍 
+
+[05/14/2022 5:02 PM] out.eth
+that means a lot. foundry is a great framework too imo. it's only the second time I've used it so most of the "good" stuff is just copy+paste from people like t11s, georgios etc. aha.
+
+
+[05/15/2022 12:02 AM] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The Cally contest is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: the Cally team will review the findings over the next couple of days, and then we'll pass them off to the judge. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a gardener if you have questions along the way!
+
+{Reactions}
+🥳 (15) 
+
+[05/17/2022 1:19 PM] Ignacio#9604
+any update?
+
+{Reactions}
+😂 
+
+[05/17/2022 1:30 PM] kenzoagada
+Brother, 2 days is nothing, give them some time.
+
+{Reactions}
+😂 (13) thankyou (5) 
+
+[05/17/2022 6:20 PM] Ignacio#9604
+sorry i am new , what is the average time?
+
+
+[05/17/2022 6:30 PM] ellahi
+the goal is 2 weeks, but reality is >1month 🙂
+
+
+[05/17/2022 6:56 PM] 0xleastwood
+C4 is currently expanding their group of judges to handle an increasing number of contests. I expect this timeline to be further streamlined in the future.
+
+
+[05/17/2022 6:59 PM] 0xleastwood
+I think right now there is a sort of bottleneck whenever a contest changes hands. Currently it is set up as:
+ - Sponsor reviews wardens findings and disputes/disagrees with issues and attaches relevant comments.
+ - Judges go through and make the decision based on information provided by the sponsor. Sometimes there is a bit of back and forth to come to a final decision. This can add some time as its all done asynchronously.
+ - Judge finishes up and C4 allows for the sponsor to do a final review and double check things before awards are announced.
+
+{Reactions}
+thankyou (2) 
+
+[05/18/2022 6:52 PM] out.eth
+Yep, we (the sponsor) have reviewed all the issues and added our comments. The judges are currently going through and doing their review now.
+
+{Reactions}
+❤️ (10) 
+
+[05/18/2022 6:56 PM] czar102
+Woow, super quick, thank you!
+
+{Reactions}
+💯 (3) 
+
+[05/18/2022 7:03 PM] ellahi
+🔥
+
+
+[05/26/2022 11:56 AM] supernovahs
+I havesubmitted my first bug form , a small gas optimization report?
+How is the funds distributed?
+
+
+[05/26/2022 1:35 PM] itsmetechjay
+This contest is currently being judged and once that is complete and the sponsor does their final review, we will get awards calculated.
+
+You'll get tagged if you win an award and then those are normally sent out within 1-2 weeks of the announcement on Polygon.
+
+
+[06/09/2022 3:16 AM] 100proof
+Is this one close?
+
+
+[06/09/2022 5:02 AM] liveactionllamac4
+Looks like sponsor is reviewing the preliminary judging results. If the sponsor and judge don't have much further discuss, hopefully this one can be finished up soon! 🤞
+
+{Reactions}
+👍 (5) 
+
+[06/09/2022 5:34 AM] smiling_heretic
+waku waku
+
+
+[06/21/2022 9:04 AM] czar102
+I hoped this one would be very quick and will align to the timeline, I was so excited about this...
+<https://docs.code4rena.com/structure/our-process>
+
+Maybe next time? 😄
+
+{Reactions}
+😅 (2) 
+
+==============================================================
+Exported 29 message(s)
+==============================================================
